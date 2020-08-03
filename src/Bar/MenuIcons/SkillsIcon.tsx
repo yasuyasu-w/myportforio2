@@ -5,11 +5,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter'
 
 
-const SkillsIcon=({PushAndClose})=>{
+const SkillsIcon=(props)=>{
 
     return (
-        <ListItem button key={'スキル'} onClick={()=>PushAndClose('/skill')} >
-              <ListItemIcon><FitnessCenterIcon /></ListItemIcon>
+        <ListItem button key={'スキル'} onClick={()=>props.PushAndClose('/skill')} >
+              <ListItemIcon className={props.hideIcon ? props.hideIcon:''} >
+                  <FitnessCenterIcon />
+              </ListItemIcon>
               <ListItemText primary='スキル' />
         </ListItem>
     )

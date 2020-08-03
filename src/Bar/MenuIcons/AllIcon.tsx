@@ -8,11 +8,8 @@ import {useHistory} from 'react-router-dom'
 
 
 
-//type Props={
-//    handleDrawerClose:()=>void
-//}
+
 const AllIcon=(props)=>{
-//const AllIcon:React.FC<Props>=(props)=>{
     const history=useHistory()
 
     const PushAndClose=(path:string)=>{
@@ -24,11 +21,11 @@ const AllIcon=(props)=>{
 
        return( 
        <>
-         <HomepageIcon PushAndClose={PushAndClose}  />
-          <ProfileIcon PushAndClose={PushAndClose} />
-          <SkillsIcon PushAndClose={PushAndClose} />
-          <ProductIcon PushAndClose={PushAndClose} />
-          <ContactIcon PushAndClose={PushAndClose} />
+         <HomepageIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
+          <ProfileIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
+          <SkillsIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
+          <ProductIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
+          <ContactIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
       </> 
        ) 
 }

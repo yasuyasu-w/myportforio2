@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuIcon:{
       display:'flex',
+      margin: '0 0 0 auto',
       '@media (max-width: 600px)': {
           display: 'none'
         }
@@ -85,7 +86,7 @@ const AppBars=({open,setOpen})=>{
           </Typography>
 
           <div className={classes.menuIcon} >
-          <AllIcon />
+          <AllIcon hideIcon={classes.hide} />
           </div>
         </Toolbar>
       </AppBar>

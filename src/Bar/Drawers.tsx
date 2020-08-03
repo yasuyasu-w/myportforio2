@@ -91,11 +91,6 @@ const Drawers=({open,setOpen})=>{
         </div>
         <Divider />
           <List>
-          {/*<HomepageIcon PushAndClose={PushAndClose}  />
-          <ProfileIcon PushAndClose={PushAndClose}  />
-          <SkillsIcon PushAndClose={PushAndClose}  />
-          <ProductIcon PushAndClose={PushAndClose}  />
-          <ContactIcon PushAndClose={PushAndClose}  />*/}
           <AllIcon handleDrawerClose={handleDrawerClose} />
         </List>
           </Drawer> 
