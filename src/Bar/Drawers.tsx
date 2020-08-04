@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import clsx from 'clsx';
 import { createStyles, makeStyles, /*useTheme,*/ Theme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -58,14 +58,25 @@ const Drawers=({open,setOpen})=>{
   const classes = useStyles()
   //const history=useHistory()
 
-  const handleDrawerClose = () => {
+  const handleDrawerClose = (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+  }
        setOpen(false);
      };
 
-  //const PushAndClose=(path:string)=>{
-  //  handleDrawerClose()
-  //  history.push(path)
-  //}
+     useEffect(() => {
+      const intervalId = setInterval(() => {
+       const nowWidth=window.parent.screen.width
+       if(nowWidth>1000){
+         console.log(nowWidth)
+         setOpen(false)}
+      }, 5000);
+      return () => {
+        clearInterval(intervalId);
+      };
+    });
+
 
     return(
         <Drawer
@@ -80,10 +91,12 @@ const Drawers=({open,setOpen})=>{
               [classes.drawerClose]: !open,
             }),
           }}
+          open={open}
+        onClose={e=>handleDrawerClose(e)}
       >
         <div className={classes.toolbar}>
         <div>MENU</div>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton onClick={e=>handleDrawerClose(e)}>
             {//theme.direction === 'rtl' ? <ChevronRightIcon /> : 
             <ChevronLeftIcon />
             }

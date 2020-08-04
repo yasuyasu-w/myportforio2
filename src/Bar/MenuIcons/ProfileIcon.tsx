@@ -9,7 +9,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 const ProfileIcon=(props)=>{
 
     return (
-        <ListItem button key={'自己紹介'} onClick={()=>props.PushAndClose('/profile')} 
+        <ListItem button key={'自己紹介'} onClick={(e)=>props.PushAndClose(e,'/profile')} 
                   className={props.justWidth} >
               <ListItemIcon className={props.hideIcon ? props.hideIcon:''} >
                   <AccountCircleIcon />

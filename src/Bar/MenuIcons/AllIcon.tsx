@@ -26,9 +26,9 @@ const AllIcon=(props)=>{
     const classes = useStyles();
     const history=useHistory()
 
-    const PushAndClose=(path:string)=>{
+    const PushAndClose=(e,path:string)=>{
         if(props.handleDrawerClose){
-            props.handleDrawerClose()
+            props.handleDrawerClose(e)
         }
         history.push(path)
       }
