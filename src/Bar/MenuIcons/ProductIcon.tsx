@@ -7,11 +7,12 @@ import LaptopChromebookIcon from '@material-ui/icons/LaptopChromebook';
 const ProductIcon=(props)=>{
 
     return (
-        <ListItem button key={'成果物'} onClick={()=>props.PushAndClose('/product')} >
+        <ListItem button key={'成果物'} onClick={()=>props.PushAndClose('/product')}
+                  className={props.justWidth} >
               <ListItemIcon className={props.hideIcon ? props.hideIcon:''} >
                   <LaptopChromebookIcon />
               </ListItemIcon>
-              <ListItemText primary='成果物' />
+              <ListItemText primary='成果物' className={props.iconFont} />
         </ListItem>
     )
 }

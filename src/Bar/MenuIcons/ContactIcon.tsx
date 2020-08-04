@@ -7,11 +7,12 @@ import MailIcon from '@material-ui/icons/Mail';
 const ContactIcon=(props)=>{
 
     return (
-        <ListItem button key={'お問い合わせ'} onClick={()=>props.PushAndClose('/contact')} >
+        <ListItem button key={'お問い合わせ'} onClick={()=>props.PushAndClose('/contact')}
+                  className={props.justWidth} >
               <ListItemIcon className={props.hideIcon ? props.hideIcon:''} >
                   <MailIcon />
               </ListItemIcon>
-              <ListItemText primary='コンタクト' />
+              <ListItemText primary='コンタクト' className={props.iconFont} />
         </ListItem>
     )
 }

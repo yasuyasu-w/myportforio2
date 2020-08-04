@@ -11,8 +11,6 @@ import AllIcon from './MenuIcons/AllIcon'
 
 
 
-//import {HomepageIcon,ProfileIcon,SkillsIcon,ProductIcon,ContactIcon} from './MenuIcons/index'
-
 
 
 const drawerWidthApp = 240;
@@ -37,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: 36,
-      '@media (min-width: 600px)': {
+      '@media (min-width: 1000px)': {
         display: 'none'
       }
     },
@@ -47,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
     menuIcon:{
       display:'flex',
       margin: '0 0 0 auto',
-      '@media (max-width: 600px)': {
+      '@media (max-width: 1000px)': {
           display: 'none'
         }
     }

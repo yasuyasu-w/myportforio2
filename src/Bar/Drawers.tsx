@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
       width: drawerWidthcopy,
       flexShrink: 0,
       whiteSpace: 'nowrap',
-      '@media (min-width: 600px)': {
+      '@media (min-width: 1000px)': {
         display: 'none'
       }
     },

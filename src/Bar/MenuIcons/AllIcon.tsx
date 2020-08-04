@@ -5,11 +5,25 @@ import  ProductIcon from './ProductIcon'
 import  SkillsIcon from './SkillsIcon'
 import  ContactIcon from './ContactIcon'
 import {useHistory} from 'react-router-dom'
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles(() =>
+  createStyles({
+          justWidth:{
+             width:'auto'
+          },
+          iconFont:{
+            '&:hover':{
+                opacity: 0.5
+            }
+          }
+  }),
+);
 
 
 
 const AllIcon=(props)=>{
+    const classes = useStyles();
     const history=useHistory()
 
     const PushAndClose=(path:string)=>{
@@ -21,11 +35,16 @@ const AllIcon=(props)=>{
 
        return( 
        <>
-         <HomepageIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
-          <ProfileIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
-          <SkillsIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
-          <ProductIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
-          <ContactIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon}  />
+         <HomepageIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon} justWidth={classes.justWidth} 
+                       iconFont={classes.iconFont}  />
+          <ProfileIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon} justWidth={classes.justWidth} 
+                       iconFont={classes.iconFont}  />
+          <SkillsIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon} justWidth={classes.justWidth} 
+                       iconFont={classes.iconFont}  />
+          <ProductIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon} justWidth={classes.justWidth} 
+                       iconFont={classes.iconFont}  />
+          <ContactIcon PushAndClose={PushAndClose} hideIcon={props.hideIcon} justWidth={classes.justWidth} 
+                       iconFont={classes.iconFont}  />
       </> 
        ) 
 }
