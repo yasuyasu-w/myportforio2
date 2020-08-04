@@ -12,13 +12,17 @@ import {useHistory} from 'react-router-dom'
 //import MusicCollection from './ProductContent/MusicCollection'
 
 const useStyles = makeStyles({
+    root:{
+      padding:'0 5%'
+    },
     title: {
         fontFamily:'Shadows Into Light,cursive',
         textAlign:'center',
         marginBottom:'50px'
     },
     rootCard:{
-        width:'100%'
+      maxWidth: '600px',
+      margin: '0 auto'
     },
     cardActions:{
         display:'flex',
@@ -37,7 +41,7 @@ export default function Product(){
     return(
         <>
         <Typography variant='h3' className={classes.title} >Product</Typography>
-
+        <div className={classes.root} >
         <Card className={classes.rootCard}>
           <CardActionArea>
             <CardMedia
@@ -61,6 +65,7 @@ export default function Product(){
            </Button>
          </CardActions>
        </Card>
+       </div>
   </>
     )
 }

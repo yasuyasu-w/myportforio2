@@ -49,7 +49,9 @@ const useStyles = makeStyles({
         Welcome to<br/>
         My  Portforio！
         </Typography>
-        <Button fullWidth className={classes.button} onClick={()=>history.push("/profile")}>
+        <Button fullWidth className={classes.button} 
+                onClick={()=>history.push("/profile")}
+                size='large' >
           About Me
         </Button>
         </div>

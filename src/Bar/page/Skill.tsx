@@ -10,6 +10,9 @@ import './img/pythonicon.png'
 
 const useStyles = makeStyles(() =>
   createStyles({
+    root:{
+        padding:'0 5%'
+    },
     title: {
         fontFamily:'Shadows Into Light,cursive',
         textAlign:'center'
@@ -55,10 +58,8 @@ export default function Skill(){
 
     return(
         <>
-        <div>スキル</div>
-
         <Typography variant='h3' className={classes.title} >Skills</Typography>
-
+        <div className={classes.root} >
         <Grid container className={classes.GridContainer} justify="center" spacing={4} >
             <Grid item className={classes.gridItem} >
               <Paper className={classes.paper} >
@@ -83,7 +84,7 @@ export default function Skill(){
                   <Grid container className={classes.gridInnerContainer} >
                       <Grid item className={classes.gridInnerItem} >
                           <Paper className={classes.innerPaper} >
-                              <div>javascript</div>
+                              <div>javascript,React</div>
                               <Avatar alt="Remy Sharp" src={require("./img/reacticon.png")} />
                           </Paper>
                       </Grid>
@@ -96,6 +97,7 @@ export default function Skill(){
               </Paper>
             </Grid>
         </Grid>
+        </div>
         </>
     )
 }
