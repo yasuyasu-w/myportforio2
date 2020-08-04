@@ -26,7 +26,7 @@ const useStyles = makeStyles(() =>
     icon:{
         fontSize:70,
         '&:hover':{
-            opacity: 0.5
+            color: '#FFB952'
         }
     }
   }),
@@ -44,13 +44,13 @@ export default function Contact(){
         <div className={classes.main} >
             <div className={classes.iconFont} >
             <a href='mailto:ya.su.ya.su.w0612@outlook.jp' >
-                <MailIcon className={classes.icon} color='primary' />
+                <MailIcon className={classes.icon} color='disabled' />
             </a>
             <p><b>Mail</b></p>
             </div>
             <div className={classes.iconFont} >
             <a href='https://github.com/yasuyasu-w' target="_blank" rel="noopener noreferrer" >
-                <GitHubIcon className={classes.icon} color='primary' />
+                <GitHubIcon className={classes.icon} color='disabled' />
             </a>
             <p><b>Github</b></p>
             </div>

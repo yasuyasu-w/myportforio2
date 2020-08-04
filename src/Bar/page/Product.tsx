@@ -29,7 +29,7 @@ const useStyles = makeStyles({
         justifyContent:'flex-end'
     },
     media: {
-      height: '400px',
+      height: '300px',
     },
   });
 
