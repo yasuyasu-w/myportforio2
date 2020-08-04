@@ -65,17 +65,17 @@ const Drawers=({open,setOpen})=>{
        setOpen(false);
      };
 
+
      useEffect(() => {
       const intervalId = setInterval(() => {
-       const nowWidth=window.parent.screen.width
+       const nowWidth=window.innerWidth
        if(nowWidth>1000){
-         console.log(nowWidth)
          setOpen(false)}
-      }, 5000);
+      }, 3000);
       return () => {
         clearInterval(intervalId);
       };
-    });
+    },[setOpen]);
 
 
     return(
